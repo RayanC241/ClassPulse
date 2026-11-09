@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ClassPulse
 
-## Getting Started
+**AI-powered lecture mastery and learning-gap analyzer** · CSE 327: Software Engineering, Fall 2026
 
-First, run the development server:
+Teachers usually find out what students missed only after the exam. ClassPulse turns lecture slides into quizzes, grades answers with explanations, and shows the teacher which topics the class has mastered and where the gaps are.
+
+## Status
+
+Early **frontend prototype with mock data**. The backend, database and AI pipeline are planned (see Roadmap).
+
+## Planned features
+
+1. **Concept graph extraction** from uploaded slides, including prerequisites
+2. **Misconception-aware quiz generation** with an AI validation pass
+3. **Rubric-based short-answer grading** with explanations and confidence scores
+4. **Root-cause insights and adaptive follow-up quizzes** for teachers and students
+
+## Current prototype
+
+- Teacher dashboard: topic mastery bar chart, class average, weakest topic, AI insight card (sample)
+- Student quiz page: multiple-choice questions with per-answer AI feedback (sample)
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Frontend | Next.js, TypeScript, Tailwind CSS, Recharts |
+| Backend (planned) | FastAPI (Python), PyMuPDF, python-pptx |
+| Database and Auth (planned) | PostgreSQL on Supabase, Supabase Auth |
+| AI (planned) | Gemini API with structured JSON output, LangGraph |
+| Testing and CI (planned) | Pytest, Playwright, GitHub Actions |
+| Deployment (planned) | Vercel, Render |
+
+## Run locally
+
+Requires Node.js 18 or higher.
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/classpulse.git
+cd classpulse
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. The quiz page is at http://localhost:3000/quiz.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Week | Milestone |
+|---|---|
+| 1 | Setup, auth, database schema, wireframes |
+| 2 | Slide upload, parsing, concept graph |
+| 3 | Quiz generation and validation |
+| 4 | Grading with explanations |
+| 5 | Teacher dashboard with AI insights |
+| 6 | Follow-up quizzes, testing, report, final demo |
 
-## Learn More
+## Team
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Rayan CHowdhury]
+- [Shihabur Rahman Shihab]
