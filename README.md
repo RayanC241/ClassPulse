@@ -36,7 +36,7 @@ Early **frontend prototype with mock data**. The backend, database and AI pipeli
 Requires Node.js 18 or higher.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/classpulse.git
+git clone https://github.com/RayanC241/ClassPulse.git
 cd classpulse
 npm install
 npm run dev
